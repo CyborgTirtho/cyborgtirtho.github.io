@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+   
+</head>
+<body>
+   
+        <div class="imgcontainer">
+            <img src="img_avatar.png" alt="Avatar" class="avatar">
+          </div>
+    <form  name="myform" onsubmit="return submitDone();" action="welcome.html">   
+    <h1>Student Register</h1>
+    <div class="container">
+        USERNAME <input id="usr" type="text" placeholder="username" minlength="3" required>   
+    <br>
+    <br>
+
+        PASSWORD <input id="pass" type="password" placeholder="password"  minlength="8" required >
+    <br>
+    <br>
+        EMAIL <input id="email" type="email" placeholder="Email ID" required >
+    <br>
+    <br>
+        REPEAT EMAIL <input id="re-email" type="email" placeholder="Re-Enter Email ID" required >
+    <br>
+    <br>
+    <input id="submitbtn"  type="submit" />
+    </div>
+    
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+    </form>
+    <script type="text/javascript">
+    function submitDone(){
+        var x=document.getElementById('usr').value;
+        var y=document.getElementById("pass").value;
+        var z=document.getElementById("email").value;
+        var a=document.getElementById("re-email").value;
+    
+     //  var regx1=/^([a-z A-z 0-9 /.]+)@([a-z A-Z 0-9]+).([a-z]{2,20})$/;
+       
+         if (z==a){
+            
+            return true;
+            
+        }
+        else
+        {
+            document.getElementById("email").style.color="red";
+            alert("Email Does not Match");
+            return false;
+            
+    
+        } 
+    }
+    </script>
+    
+</body>
+</html>
